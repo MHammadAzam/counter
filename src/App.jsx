@@ -4,14 +4,25 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+
+  let [counter, setCounter] = useState(0) // STATE HOOK.
+
+  function addValue() {
+     setCounter(counter + 1)
+  }
+
+  function decreaseValue(){
+    setCounter(counter - 1)
+  }
   return (
     <>
       <h1>Hammad Azam</h1>
       <h2>Counter value: {counter}</h2>
-      <button>Add Value</button> <br />
-      <button>Decrease Value</button>
+      <button onClick={addValue}>Add Value</button> <br />
+      <button onClick={decreaseValue}>Decrease Value</button>
     </>
   )
 }
 
 export default App
+
